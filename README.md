@@ -45,10 +45,11 @@ MINOR_FINAL/
 ├── README.md            # Project documentation
 └── LICENSE.txt          # Custom usage rights
 ```
-🚀 Installation & Setup
-1. Clone the Repository
-Bash
-git clone https://github.com/khushpatil75/DeepVision-AI.git
+## 🚀 Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/khushpatil75/DeepVision-AI.git](https://github.com/khushpatil75/DeepVision-AI.git)
 cd DeepVision-AI
 2. Setup the Python Environment
 It is highly recommended to use a virtual environment to prevent dependency conflicts.
@@ -60,6 +61,7 @@ python -m venv venv
 venv\Scripts\activate
 # On Mac/Linux:
 source venv/bin/activate
+
 3. Install Dependencies
 Install all required machine learning and backend libraries.
 
@@ -75,16 +77,13 @@ The API will be available at http://localhost:8000.
 5. Launch the Frontend
 Because the frontend is built with Vanilla web technologies, simply open frontend/index.html in your preferred web browser, or use a tool like VS Code's "Live Server" extension.
 
-📊 Model Training & Pre-Processing
+## 📊 Model Training & Pre-Processing
 The models were trained using PyTorch in a Google Colab environment. The data pre-processing pipeline focuses on standardizing inputs for the neural networks, ensuring consistency between the dataset images and the digital canvas inputs. The core transformations include:
+* **Grayscale to RGB Conversion:** Padding single-channel images to 3 channels to satisfy ResNet and ViT architecture requirements.
+* **Resizing:** Scaling all inputs to `224x224` pixels.
+* **Normalization:** Standardizing pixel values using ImageNet standard means `[0.485, 0.456, 0.406]` and standard deviations `[0.229, 0.224, 0.225]`.
 
-Grayscale to RGB Conversion: Padding single-channel images to 3 channels to satisfy ResNet and ViT architecture requirements.
+## ⚖️ License & Copyright
+**Copyright (c) 2026 Khush Patil. All Rights Reserved.**
 
-Resizing: Scaling all inputs to 224x224 pixels.
-
-Normalization: Standardizing pixel values using ImageNet standard means [0.485, 0.456, 0.406] and standard deviations [0.229, 0.224, 0.225].
-
-⚖️ License & Copyright
-Copyright (c) 2026 Khush Patil. All Rights Reserved.
-
-This software is provided for personal, educational, and non-commercial viewing purposes only. Unauthorized modification, distribution, or presentation of this codebase as your own academic or professional work is strictly prohibited. Please see the LICENSE.txt file for full details.
+This software is provided for personal, educational, and non-commercial viewing purposes only. Unauthorized modification, distribution, or presentation of this codebase as your own academic or professional work is strictly prohibited. Please see the `LICENSE.txt` file for full details.
