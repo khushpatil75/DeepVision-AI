@@ -26,6 +26,7 @@ Built as a comprehensive B.Tech project, this application features a custom-buil
 * **Machine Learning:** PyTorch, Torchvision, Timm (Torch Image Models)
 
 ## 📂 Project Structure
+
 ```text
 MINOR_FINAL/
 │
@@ -43,10 +44,11 @@ MINOR_FINAL/
 ├── requirements.txt     # Python dependencies
 ├── README.md            # Project documentation
 └── LICENSE.txt          # Custom usage rights
+```
 🚀 Installation & Setup
 1. Clone the Repository
 Bash
-git clone [https://github.com/khushpatil75/DeepVision-AI.git](https://github.com/khushpatil75/DeepVision-AI.git)
+git clone https://github.com/khushpatil75/DeepVision-AI.git
 cd DeepVision-AI
 2. Setup the Python Environment
 It is highly recommended to use a virtual environment to prevent dependency conflicts.
