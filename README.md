@@ -52,7 +52,7 @@ MINOR_FINAL/
 git clone [https://github.com/khushpatil75/DeepVision-AI.git](https://github.com/khushpatil75/DeepVision-AI.git)
 cd DeepVision-AI
 ```
-2. Setup the Python Environment
+### 2. Setup the Python Environment
 It is highly recommended to use a virtual environment to prevent dependency conflicts.
 ```bash
 python -m venv venv
@@ -63,18 +63,18 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-3. Install Dependencies
+### 3. Install Dependencies
 Install all required machine learning and backend libraries.
 ```Bash
 pip install -r requirements.txt
 ```
-4. Run the Backend Server
+### 4. Run the Backend Server
 Start the FastAPI server using Uvicorn.
 ```Bash
 uvicorn main:app --reload
 ```
 The API will be available at http://localhost:8000.
-5. Launch the Frontend
+### 5. Launch the Frontend
 ```bash
 Because the frontend is built with Vanilla web technologies, simply open frontend/index.html in your preferred web browser, or use a tool like VS Code's "Live Server" extension.
 ```
