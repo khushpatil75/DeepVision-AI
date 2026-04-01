@@ -72,8 +72,8 @@ pip install -r requirements.txt
 Start the FastAPI server using Uvicorn.
 ```Bash
 uvicorn main:app --reload
-The API will be available at http://localhost:8000.
 ```
+The API will be available at http://localhost:8000.
 5. Launch the Frontend
 ```bash
 Because the frontend is built with Vanilla web technologies, simply open frontend/index.html in your preferred web browser, or use a tool like VS Code's "Live Server" extension.
