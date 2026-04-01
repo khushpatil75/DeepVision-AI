@@ -76,6 +76,7 @@ The API will be available at http://localhost:8000.
 
 5. Launch the Frontend
 Because the frontend is built with Vanilla web technologies, simply open frontend/index.html in your preferred web browser, or use a tool like VS Code's "Live Server" extension.
+```
 
 ## 📊 Model Training & Pre-Processing
 The models were trained using PyTorch in a Google Colab environment. The data pre-processing pipeline focuses on standardizing inputs for the neural networks, ensuring consistency between the dataset images and the digital canvas inputs. The core transformations include:
@@ -85,5 +86,4 @@ The models were trained using PyTorch in a Google Colab environment. The data pr
 
 ## ⚖️ License & Copyright
 **Copyright (c) 2026 Khush Patil. All Rights Reserved.**
-
 This software is provided for personal, educational, and non-commercial viewing purposes only. Unauthorized modification, distribution, or presentation of this codebase as your own academic or professional work is strictly prohibited. Please see the `LICENSE.txt` file for full details.
