@@ -1,0 +1,10 @@
+# Web Server & API
+fastapi
+uvicorn
+python-multipart
+
+# Machine Learning & Computer Vision
+torch
+torchvision
+timm
+Pillow
