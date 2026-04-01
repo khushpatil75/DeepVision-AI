@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepVision AI | MITAOE Second Year B.Tech Minor Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <div class="glow-dot"></div>
+            <span>DeepVision AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="#app-top">App Console</a>
+            <a href="#project-info">Methodology</a>
+            </div>
+    </nav>
+
+    <div id="app-top" class="hero-section">
+        
+        <div class="institution-header">
+            <div class="institution-logo-container">
+                <img src="Images/mitaoe.png" alt="MITAOE Logo" class="college-logo">
+            </div>
+            <div class="institution-info">
+                <p class="dept-name"></p>
+                <h3 class="college-name">Department of Computer Engineering</h3>
+            </div>
+        </div>
+
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="glow-dot pulse"></div>
+                <h1>DeepVision AI</h1>
+            </div>
+            <p class="subtitle">Universal Handwritten Character Recognition Engine</p>
+        </header>
+
+        <main class="dashboard">
+            <section class="glass-panel input-section">
+                <div class="panel-header">
+                    <h2>Input Module</h2>
+                    <span class="badge status-idle" id="apiStatus">Awaiting Input</span>
+                </div>
+                
+                <div class="dataset-toggle-container">
+                    <div class="segmented-control">
+                        <input type="radio" id="mode-dev" name="datasetMode" value="dev" checked>
+                        <label for="mode-dev" class="segment-label">Devanagari</label>
+
+                        <input type="radio" id="mode-emnist" name="datasetMode" value="emnist">
+                        <label for="mode-emnist" class="segment-label">EMNIST</label>
+
+                        <input type="radio" id="mode-sans" name="datasetMode" value="sans">
+                        <label for="mode-sans" class="segment-label">Sanskrit</label>
+                        
+                        <div class="segment-slider"></div>
+                    </div>
+                </div>
+                
+                <div class="canvas-container">
+                    <canvas id="drawCanvas" width="300" height="300"></canvas>
+                </div>
+                
+                <div class="button-group">
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                    <label for="imageUpload" class="btn btn-secondary upload-btn">
+                        Upload
+                        <input type="file" id="imageUpload" accept="image/png, image/jpeg" hidden>
+                    </label>
+                </div>
+
+                <button id="predictBtn" class="btn btn-primary run-btn">
+                    <span id="btnText">Run Parallel Inference</span>
+                    <div id="btnSpinner" class="spinner hidden"></div>
+                </button>
+            </section>
+
+            <section class="glass-panel output-section">
+                <div class="panel-header">
+                    <h2>Inference Dashboard</h2>
+                    <div class="latency-metric">
+                        <span class="latency-label">Latency:</span>
+                        <span class="latency-value" id="inference-time">-- ms</span>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card" id="card-cnn"> 
+                        <div class="card-header">
+                            <h3>Standard CNN</h3>
+                            <span class="conf-text" id="cnn-conf-text">0%</span>
+                        </div>
+                        <div class="prediction-display" id="cnn-label">--</div>
+                        <div class="confidence-bar-bg">
+                            <div class="confidence-bar-fill" id="cnn-conf" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="result-card" id="card-vit">
+                        <div class="card-header">
+                            <h3>Vision Transformer (ViT)</h3>
+                            <span class="conf-text" id="vit-conf-text">0%</span>
+                        </div>
+                        <div class="prediction-display" id="vit-label">--</div>
+                        <div class="confidence-bar-bg">
+                            <div class="confidence-bar-fill" id="vit-conf" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="result-card" id="card-hyb">
+                        <div class="card-header">
+                            <h3>Hybrid Architecture</h3>
+                            <span class="conf-text" id="hyb-conf-text">0%</span>
+                        </div>
+                        <div class="prediction-display" id="hyb-label">--</div>
+                        <div class="confidence-bar-bg">
+                            <div class="confidence-bar-fill" id="hyb-conf" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section id="project-info" class="info-section">
+        <div class="glass-panel">
+            <h2 class="section-title">Project Methodology</h2>
+            <p class="section-desc">Developed from scratch, this system utilizes a parallel-inference pipeline to evaluate hand-drawn data against three distinct deep learning paradigms simultaneously.</p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📊 Dataset Engineering</h3>
+                    <ul>
+                        <li><strong>DHCD (Hindi):</strong> Trained on 46 distinct classes mapping complex consonants and numerical digits of the Devanagari script.</li>
+                        <li><strong>EMNIST (English):</strong> Utilized the 'Balanced' split (47 classes) covering uppercase, lowercase, and numeric datasets.</li>
+                        <li><strong>Sanskrit (Custom):</strong> Expanded linguistic capabilities with 19 distinct ancient Sanskrit conjuncts (Jodakshara).</li>
+                        <li><strong>Preprocessing:</strong> Dynamic color-inversion pipelines flawlessly interpret white-canvas user inputs and real-world photographs for black-background models.</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🧠 Neural Architectures</h3>
+                    <ul>
+                        <li><strong>Deep CNN:</strong> Custom multi-layer convolutional network utilizing Batch Normalization and Dropout for robust feature extraction.</li>
+                        <li><strong>Vision Transformer:</strong> Divided image into 16x16 patches using self-attention to understand global character structures.</li>
+                        <li><strong>Hybrid Model:</strong> State-of-the-art approach fusing a ResNet18 backbone with a multi-layer Transformer Encoder.</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚙️ Training & Deployment</h3>
+                    <ul>
+                        <li><strong>Hardware:</strong> Models were compiled and trained using GPU acceleration for high-dimensional tensor operations.</li>
+                        <li><strong>Optimization:</strong> Network weights optimized using Adam optimizer alongside Cross-Entropy Loss over extended epoch cycles.</li>
+                        <li><strong>API Backend:</strong> Deployed via a custom, asynchronous FastAPI backend running PyTorch in inference mode for real-time Softmax probability scoring.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

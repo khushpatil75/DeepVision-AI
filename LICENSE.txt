@@ -1,0 +1,12 @@
+Copyright (c) 2026 Khush Patil. All Rights Reserved.
+
+This software, including the DeepVision AI FastAPI backend, the Vanilla HTML/CSS/JavaScript frontend, and the custom neural network architectures (the "Software"), is the intellectual property of Khush Patil.
+
+Permission is hereby granted to individuals obtaining a copy of this Software directly from the author to view and execute the Software for personal, educational, and non-commercial purposes only.
+
+You may NOT:
+1. Modify, alter, or create derivative works of the Software.
+2. Distribute, share, sub-license, or sell copies of the Software.
+3. Submit or present this Software, in whole or in part, as your own academic or professional work.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.

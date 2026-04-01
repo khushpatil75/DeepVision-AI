@@ -1,0 +1,9 @@
+# Ignore Python Caches
+__pycache__/
+*.pyc
+
+# Ignore React/Node Modules (if decided to use react)
+node_modules/
+
+# Ignore Mac junk files
+.DS_Store
