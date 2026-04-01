@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Canvas Setup & Drawing Logic ---
+    // -- Canvas Setup & Drawing Logic --
     const canvas = document.getElementById('drawCanvas');
     const ctx = canvas.getContext('2d');
     let isDrawing = false;
